@@ -1,0 +1,42 @@
+<div *ngIf="employeeShow">
+    <div class="content-section implementation"></div>
+    <h3>Employee Database</h3>
+    <p-dataTable *ngIf="visible" [value]="Employees" sortMode="multiple" [resizableColumns]="true" [rows]="10" [paginator]="true" [pageLinks]="5" [rowsPerPageOptions]="[5,10,20]">
+        <p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header" [sortable]="true" [filter]="true" filterPlaceholder="Search"></p-column>
+        <p-footer><div class="ui-helper-clearfix" style="width:100%"><button type="button" pButton icon="fa-plus" style="float:left" (click)="showDialogToAdd()" label="Add"></button></div></p-footer>          
+      </p-dataTable>
+
+      <p-dialog header="Add New Employee" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true">
+          <div class="ui-grid ui-grid-responsive ui-fluid" *ngIf="newEntryData">
+              <div class="ui-grid-row">
+                  <div class="ui-grid-col-4"><label for="vin">ssn</label></div>
+                  <div class="ui-grid-col-8"><input pInputText id="ssn" [(ngModel)]="newEntryData[0].ssn" /></div>
+              </div>
+              <div class="ui-grid-row">
+                  <div class="ui-grid-col-4"><label for="year">Name</label></div>
+                  <div class="ui-grid-col-8"><input pInputText id="Name" [(ngModel)]="newEntryData[0].Name" /></div>
+              </div>
+              <div class="ui-grid-row">
+                  <div class="ui-grid-col-4"><label for="brand">Phone</label></div>
+                  <div class="ui-grid-col-8"><input pInputText id="Phone" [(ngModel)]="newEntryData[0].Phone" /></div>
+              </div>
+              <div class="ui-grid-row">
+                  <div class="ui-grid-col-4"><label for="color">Office_num</label></div>
+                  <div class="ui-grid-col-8"><input pInputText id="Office_num" [(ngModel)]="newEntryData[0].Office_num" /></div>
+              </div>
+              <div class="ui-grid-row">
+                  <div class="ui-grid-col-4"><label for="password">Password</label></div>
+                  <div class="ui-grid-col-8"><input pInputText id="Password" [(ngModel)]="newEntryData[0].Password" /></div>
+              </div>
+          </div>
+          <p-footer>
+              <div class="ui-dialog-buttonpane ui-helper-clearfix">
+                  <button type="button" pButton icon="fa-close" (click)="delete()" label="Delete"></button>
+                  <button type="button" pButton icon="fa-check" (click)="save()" label="Save"></button>
+              </div>
+          </p-footer>
+      </p-dialog>
+    
+    <br>
+    
+    </div>

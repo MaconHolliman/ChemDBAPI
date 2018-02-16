@@ -1,0 +1,34 @@
+{
+  "name": "experiment",
+  "plural": "experiments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "assay_source": {
+      "type": "string"
+    },
+    "organism": {
+      "type": "string"
+    },
+    "tissue": {
+      "type": "string"
+    },
+    "cell_line": {
+      "type": "string"
+    },
+    "aeid": {
+      "type": "number",
+      "required": true
+    },
+    "citation": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

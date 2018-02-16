@@ -1,0 +1,50 @@
+{
+  "name": "chemical",
+  "plural": "chemicals",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "cid": {
+      "type": "number",
+      "required": true
+    },
+    "sid": {
+      "type": "number",
+      "required": true
+    },
+    "casn": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    },
+    "general_name": {
+      "type": "string"
+    },
+    "name_synonyms": {
+      "type": "string"
+    },
+    "IUPAC_name": {
+      "type": "string"
+    },
+    "formula": {
+      "type": "string"
+    },
+    "mw": {
+      "type": "string"
+    },
+    "SMILES": {
+      "type": "string"
+    },
+    "pubchemfingerprint": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

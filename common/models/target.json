@@ -1,0 +1,37 @@
+{
+  "name": "target",
+  "plural": "targets",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "target_id": {
+      "type": "number",
+      "required": true
+    },
+    "target_type": {
+      "type": "string"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "symbol": {
+      "type": "string"
+    },
+    "gene_name": {
+      "type": "string"
+    },
+    "gene_symbol": {
+      "type": "string"
+    },
+    "target_desc": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,34 @@
+{
+  "name": "citation",
+  "plural": "citations",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "citation_id": {
+      "type": "number",
+      "required": true
+    },
+    "DOI": {
+      "type": "string"
+    },
+    "citation": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
