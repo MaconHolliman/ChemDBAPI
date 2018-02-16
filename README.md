@@ -1,2 +1,4 @@
-npm install
-node .     (this starts the API)
+"npm install"
+
+
+"node ."     (this starts the API)
